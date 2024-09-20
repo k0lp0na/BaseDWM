@@ -9,7 +9,7 @@ static       int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "Iosevka Nerd Font Mono:size=10" };
+static const char *fonts[]          = {  "JetBrainsMono Nerd Font:antialias=true:autohint=true:size=11", "Noto Sans CJK JP:size=11"  };
 static const char col_debkg[]       = "#1a1b26";
 static const char col_acbkg[]       = "#414868";
 static const char col_acfor[]       = "#c0caf5";
@@ -23,7 +23,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5" };
+static const char *tags[] = { "一", "二", "三", "四", "五" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -46,15 +46,15 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "  ",      tile },    /* first entry is default */
-	{ "  ",      monocle },
-	{ "  ",     dwindle },
-	{ "  ",      bstack },
-	{ "  ",      bstackhoriz },
-	{ " 󱗼 ",      grid },
-	{ " 󱇚 ",      horizgrid },
-        { "  ",      centeredmaster },
-	{ "  ",      NULL },    /* no layout function means floating behavior */
+	{ " ",      tile },    /* first entry is default */
+	{ " ",      monocle },
+	{ " ",     dwindle },
+	{ " ",      bstack },
+	{ " ",      bstackhoriz },
+	{ "󱗼 ",      grid },
+	{ "󱇚 ",      horizgrid },
+        { " ",      centeredmaster },
+	{ " ",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
@@ -139,6 +139,7 @@ static const Button buttons[] = {
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY|ShiftMask, Button1,      dragmfact,      {0} },
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
