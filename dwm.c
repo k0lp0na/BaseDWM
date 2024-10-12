@@ -181,7 +181,7 @@ static void drawbars(void);
 static void expose(XEvent *e);
 static void focus(Client *c);
 static void focusin(XEvent *e);
-static void focusmon(const Arg *arg);
+/*static void focusmon(const Arg *arg);*/
 static void focusstack(const Arg *arg);
 static Atom getatomprop(Client *c, Atom prop);
 static int getrootptr(int *x, int *y);
@@ -230,7 +230,7 @@ static void sigterm(int unused);
 static void spawn(const Arg *arg);
 static void spawnscratch(const Arg *arg);
 static void tag(const Arg *arg);
-static void tagmon(const Arg *arg);
+/*static void tagmon(const Arg *arg);*/
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglescratch(const Arg *arg);
