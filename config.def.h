@@ -16,6 +16,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int vertpad            = 5;       /* vertical padding of bar */
 static const int sidepad            = 5;       /* horizontal padding of bar */
+static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
+static const int vertpadbar         = 2;        /* vertical padding for statusbar */
 static const char *fonts[]          = {  "JetBrainsMono Nerd Font:antialias=true:autohint=true:size=11", "Noto Sans CJK JP:size=11"  };
 static const char col_debkg[]       = "#1a1b26";
 static const char col_acbkg[]       = "#414868";
@@ -35,6 +37,12 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "一", "二", "三", "四", "五" };
+
+static const unsigned int ulinepad	= 1;	/* horizontal padding between the underline and tag */
+static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
+static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
+static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
+
 
 static const Rule rules[] = {
         /* xprop(1):
